@@ -26,8 +26,8 @@ $dateNice  = date('d M Y, h:i A');
 // ══════════════════════════════════════════════════════════════
 // ⚙️  CHANGE THESE 3 VALUES ONLY
 // ══════════════════════════════════════════════════════════════
-$SMTP_USER   = 'your_gmail@gmail.com';    // Your Gmail address
-$SMTP_PASS   = 'xxxx xxxx xxxx xxxx';     // Gmail App Password (16 chars, no spaces)
+$SMTP_USER   = 'operations@rangeforex.com';    // Your Gmail address
+$SMTP_PASS   = 'qtnd wvwe fteq jhkg';     // Gmail App Password (16 chars, no spaces)
 $ADMIN_EMAIL = 'operations@rangeforex.com'; // Who receives the notification
 // ══════════════════════════════════════════════════════════════
 
