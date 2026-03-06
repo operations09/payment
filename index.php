@@ -609,7 +609,7 @@ footer{
   <div class="footer-right">
     <a href="#">Privacy Policy</a>
     <a href="#">Terms</a>
-    <a href="mailto:operations@rangeforex.com">Support</a>
+    <a href="/cdn-cgi/l/email-protection#2b445b4e594a5f424445586b594a454c4e4d44594e5305484446">Support</a>
   </div>
 </footer>
 
@@ -621,7 +621,7 @@ footer{
     <p class="popup-sub">Your deposit has been successfully submitted to Range Markets operations team.</p>
     <div class="popup-detail">
       <i class="fas fa-envelope" style="margin-right:6px"></i>
-      Confirmation sent to <strong>operations@rangeforex.com</strong><br>
+      Confirmation sent to <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="264956435447524f494855665447484143404954435e0845494b">[email&#160;protected]</a></strong><br>
       Your deposit will be approved within <strong>3–5 minutes</strong>.
     </div>
     <div class="popup-time" id="popup-timestamp"></div>
@@ -631,7 +631,7 @@ footer{
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── WALLET ADDRESSES ─────────────────────────────────────────────
 const wallets = {
   TRC20: "TYourTRC20AddressHere123456789",   // ← Replace with real TRC20
@@ -717,7 +717,7 @@ function submitDeposit() {
   btn.innerHTML = '<div class="spinner"></div> Submitting...';
   setStatus('info','fas fa-circle-notch fa-spin','Sending to operations team...');
 
-  fetch('submit.php', {
+  fetch('/.netlify/functions/submit', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -762,17 +762,4 @@ function showSuccessPopup(name, method) {
   });
   document.getElementById('popup-timestamp').textContent =
     `Submitted at ${timeStr} · Ref: RMK${Date.now().toString().slice(-6)}`;
-  document.getElementById('popupOverlay').classList.add('show');
-}
-
-function closePopup() {
-  document.getElementById('popupOverlay').classList.remove('show');
-}
-
-// Close popup on overlay click
-document.getElementById('popupOverlay').addEventListener('click', function(e) {
-  if (e.target === this) closePopup();
-});
-</script>
-</body>
-</html>
+  document.getElementById('popupOverlay').classList.add('sho
